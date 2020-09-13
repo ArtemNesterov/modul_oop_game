@@ -17,7 +17,7 @@ def input_start(string=START_STRING):
         exit()
 
 
-def select_player_attack(string="введи 1 длявыбора волшебника, 2 для воина, 3 для разбойника"):
+def select_player_attack(string="enter 1 for wizard selection, 2 for warrior, 3 for robber"):
     while True:
         i = input(string)
         if i.isdigit():
@@ -39,7 +39,6 @@ def play():
 
     level = 1
     player = model.Player(input_player_name(), LIVES)
-    player.input_start()
     enemy = model.Enemy(level)
     while True:
         try:
@@ -76,4 +75,4 @@ if __name__ == '__main__':
         pass
 
     finally:
-        print("Good bye!")
+        print(GOODBYE_STRING)
